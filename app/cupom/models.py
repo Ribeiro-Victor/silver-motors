@@ -1,5 +1,9 @@
 from app.extensions import db
 from app.models import BaseModel
+from flask import Blueprint
+
+cupom_api = Blueprint('cupom_api', __name__)
+
 
 class Cupom(BaseModel):
 

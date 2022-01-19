@@ -1,5 +1,8 @@
 from app.extensions import db
 from app.models import BaseModel
+from flask import Blueprint
+
+moto_api = Blueprint('moto_api', __name__)
 
 class Moto(BaseModel):
 

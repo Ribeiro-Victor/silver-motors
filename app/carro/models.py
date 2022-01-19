@@ -1,5 +1,8 @@
 from app.extensions import db
 from app.models import BaseModel
+from flask import Blueprint
+
+carro_api = Blueprint('carro_api', __name__)
 
 class Carro(BaseModel):
 
