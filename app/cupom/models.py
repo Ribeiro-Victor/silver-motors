@@ -13,5 +13,7 @@ class Cupom(BaseModel):
 
     def json(self):
         return {
-
+            "desconto percentual":self.descontoPercentual,
+            "para carro":self.paraCarro,
+            "para moto":self.paraMoto
         }
