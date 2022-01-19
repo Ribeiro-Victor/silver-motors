@@ -7,7 +7,7 @@ cupom_api = Blueprint('cupom_api', __name__)
 
 class Cupom(BaseModel):
 
-    __tablename__ = 'carrinho'
+    __tablename__ = 'cupom'
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     descontoPercentual = db.Column(db.Float)

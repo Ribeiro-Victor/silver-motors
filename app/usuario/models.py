@@ -6,7 +6,7 @@ usuario_api = Blueprint('usuario_api', __name__)
 
 class User(BaseModel):
 
-    __tablename__ = 'user'
+    __tablename__ = 'usuario'
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     nome = db.Column(db.String(70), nullable=False)
