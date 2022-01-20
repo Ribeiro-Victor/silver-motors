@@ -14,6 +14,8 @@ class Cupom(BaseModel):
     paraCarro = db.Column(db.Boolean)
     paraMoto = db.Column(db.Boolean)
 
+    id_usuario = db.Column(db.Integer, db.ForeignKey('usuario.id'))
+    usuario = db.relationship("Usuario", backref=db.backref("cupom", uselist=False))
 
     def json(self):
         return {

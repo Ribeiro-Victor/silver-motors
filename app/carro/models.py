@@ -16,6 +16,8 @@ class Carro(BaseModel):
     quilometragem = db.Column(db.Float)
     cor = db.Column(db.String(20))
 
+    
+
     def json(self):
         return {
             "montadora":self.montadora,

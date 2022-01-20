@@ -14,6 +14,9 @@ class User(BaseModel):
     email = db.Column(db.String(70), unique=True, index=True)
     endereco = db.Column(db.String(100))
 
+    id_carrinho = db.Column(db.Integer, db.ForeignKey('carrinho.id'))
+    carrinho = db.relationship("Carrinho", backref=db.backref("usuario", uselist=False))
+
 
     def json(self):
         return {
