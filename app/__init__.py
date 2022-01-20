@@ -1,3 +1,4 @@
+import imp
 from flask import Flask
 from app.config import Config
 from app.extensions import db, migrate
@@ -6,6 +7,7 @@ from app.carrinho.models import carrinho_api
 from app.carro.models import carro_api
 from app.moto.models import moto_api
 from app.cupom.models import cupom_api
+from app.item.models import item_api
 
 def create_app():
 
@@ -21,6 +23,7 @@ def create_app():
     app.register_blueprint(carro_api)
     app.register_blueprint(moto_api)
     app.register_blueprint(cupom_api)
+    app.register_blueprint(item_api)
 
 
     return app
